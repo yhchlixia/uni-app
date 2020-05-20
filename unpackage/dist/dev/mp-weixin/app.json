@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/mine/mine",
+    "pages/project/project",
+    "pages/case/case",
+    "pages/components/select"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "工时统计",
+    "navigationBarBackgroundColor": "#1183fb",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#ffffff",
+    "position": "bottom",
+    "height": "80px",
+    "selectedColor": "#ffffff",
+    "borderStyle": "black",
+    "backgroundColor": "#1183fb",
+    "fontSize": "24px",
+    "selectedFontSize": "24px",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的地盘"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "产品"
+      },
+      {
+        "pagePath": "pages/project/project",
+        "text": "项目"
+      },
+      {
+        "pagePath": "pages/case/case",
+        "text": "测试"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": ""
+    }
+  },
+  "usingComponents": {}
+}

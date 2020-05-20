@@ -1,0 +1,1 @@
+<view><input type="text" value="{{language}}" data-event-opts="{{[['input',[['__set_model',['','language','$event',[]]]]]]}}" bindinput="__e"/></view>

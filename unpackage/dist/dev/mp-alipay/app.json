@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/mine/mine",
+    "pages/project/project",
+    "pages/case/case",
+    "pages/components/select"
+  ],
+  "subPackages": [],
+  "window": {
+    "defaultTitle": "工时统计",
+    "titleBarColor": "#1183fb",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "textColor": "#ffffff",
+    "selectedColor": "#ffffff",
+    "backgroundColor": "#1183fb",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "我的地盘"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "name": "产品"
+      },
+      {
+        "pagePath": "pages/project/project",
+        "name": "项目"
+      },
+      {
+        "pagePath": "pages/case/case",
+        "name": "测试"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

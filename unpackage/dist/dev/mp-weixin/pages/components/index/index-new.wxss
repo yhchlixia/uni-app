@@ -1,0 +1,33 @@
+
+.index-new {
+	background-color: #ffffff;
+	/* padding: 10px; */
+	border-radius: 5px;
+	margin-top: 10px;
+	font-size: 18px;
+}
+.index-new-title {
+	/* height: 40px; */
+	font-weight: bold;
+	background-color: #ffffff;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+	padding: 10px;
+}
+.inde-new-content {
+	height: 200px;
+	background-color: #ffffff;
+	overflow: scroll;
+	overflow-x: hidden;
+	padding: 0 10px 20px;
+}
+.index-new-content-p {
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+

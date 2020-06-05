@@ -106,6 +106,11 @@
 					this.time = 60;
 					return false;
 				}
+				if (this.sendNum === 0) {
+				   this.$api.adminService.sendCheck(this.loginForm).then(res => {
+						console.log(res);
+					})
+				}
 				this.time = parseInt(this.time) - 1;
 				this.sendMsg = this.time;
 				this.sendNum = 1;
@@ -147,18 +152,51 @@
 						return;
 					}
 				}
-				if (this.loginForm.username !== 'admin' || this.loginForm.password !== 'Aa000000') {
-					uni.showToast({
-						title: '密码不正确',
-						duration: 2000,
-						icon: 'none'
-					});
-					return;
-				}
-				uni.switchTab({
-				    url: '/pages/index/index'
-				});
-				console.log(this.loginForm);
+				console.log(this)
+				this.$api.adminService.login(this.loginForm).then(res => {
+					if (res) {
+						uni.switchTab({
+							url: '/pages/index/index'
+						});
+					}
+				})
+				// axios.get('login', {params: this.loginForm}).then(res => {
+				// 	console.log(res);
+				// 	switch (res.data.status){
+				// 		case 0:
+				// 			uni.showToast({
+				// 				title: '登陆成功',
+				// 				duration: 2000,
+				// 				icon: 'success'
+				// 			});
+				// 			uni.switchTab({
+				// 				url: '/pages/index/index'
+				// 			});
+				// 			break;
+				// 		case 1:
+				// 			uni.showToast({
+				// 				title: res.data.message,
+				// 				duration: 2000,
+				// 				icon: 'none'
+				// 			});
+				// 		case 2:
+				// 			uni.showToast({
+				// 				title: '密码错误',
+				// 				duration: 2000,
+				// 				icon: 'none'
+				// 			});
+				// 		default:
+				// 			break;
+				// 	}
+				// })
+				// if (this.loginForm.username !== 'admin' || this.loginForm.password !== 'Aa000000') {
+				// 	uni.showToast({
+				// 		title: '密码不正确',
+				// 		duration: 2000,
+				// 		icon: 'none'
+				// 	});
+				// 	return;
+				// }
 			},
 			toSavePassword() {
 				this.loginForm.savePassword = !this.loginForm.savePassword;

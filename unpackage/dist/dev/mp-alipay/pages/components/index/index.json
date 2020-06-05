@@ -1,6 +1,6 @@
 {
+  "component": true,
   "usingComponents": {
     "index-new": "/pages/components/index/index-new"
-  },
-  "component": true
+  }
 }
